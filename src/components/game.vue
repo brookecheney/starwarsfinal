@@ -13,11 +13,13 @@
             </v-card>
           </v-menu>
         </v-text-field>
+        <!-- conditional rendering -->
         <gameResult v-if="gameResultShow" 
                     :name='message' 
                     :randomChar='randomChar'></gameResult>
       </v-flex>
     </v-layout>
+    <!-- conditional rendering -->
      <div v-if="gameResultShow" @click='restart()' class="text-xs-center">
         <v-btn round color="black" dark>Start Over</v-btn>
       </div>
