@@ -33,4 +33,4 @@ Manage your application's state using vuex.
 [store.js](https://github.com/brookecheney/starwarsfinal/blob/master/src/store.js) 
 
  Structure, document, and deploy your final project code according to common industry practices.   
-https://starwarsapp.netlify.com/?_ga=2.34414439.797767403.1544249277-459333323.1544249277#/ 
+https://starwarsappfinal.netlify.com/#/
