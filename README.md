@@ -1,3 +1,4 @@
+##Star Wars Vue Project
 
 1. Effectively use conditional logic and JavaScript array methods to render large lists.  
 [Decide.vue](https://github.com/riderjensen/vue-final-rider/blob/master/src/views/Decide.vue)
