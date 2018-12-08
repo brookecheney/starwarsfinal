@@ -1,5 +1,5 @@
 <template>
- <v-app id="inspire">
+<v-app id="inspire">
     <v-navigation-drawer
       v-model="drawer"
       fixed
@@ -37,16 +37,16 @@
           </router-link> 
           </v-list-tile-content>
         </v-list-tile>
-           <v-list-tile @click="">
+        <v-list-tile @click="">
           <v-list-tile-action>
             <v-icon>contact_mail</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-           <router-link to="/contact">  <v-list-tile-title>CONTACT US</v-list-tile-title>
+           <router-link to="/Contact">  <v-list-tile-title>CONTACT US</v-list-tile-title>
           </router-link> 
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="">
+   <v-list-tile @click="">
           <v-list-tile-action>
             <v-icon>contact_mail</v-icon>
           </v-list-tile-action>
@@ -60,81 +60,67 @@
     <v-toolbar color="black" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
            <span class="yellow--text">
- <v-toolbar-title>STARWARS</v-toolbar-title></span>
+ <v-toolbar-title>Choose your Character</v-toolbar-title></span>
     </v-toolbar>
-    <v-content>
+    <hr><span>
+        </span>
+  <br>
+  <br>
+    <div class="container">
+<p v-highlight:background.delayed="'yellow'">Which STAR WARS character are YOU</p>
+<app-game></app-game>
+</div>
+<br>
 
-          <h3 class="display-3"> Let's Play</h3>
-
- <v-jumbotron>
-    <v-container fill-height>
-      
-      <v-layout align-center>
-        
-        <v-flex>
-          <h3 class="display-3">          <img src="@/images/starwar.png"/>
-</h3>
-
-    
-        </v-flex>
-      </v-layout>
-
-    </v-container>
-
-  </v-jumbotron>
-
-          <h3 class="display-3">  </h3>
-
-</v-content>
-<v-footer color="black" app>
-<span class="yellow--text">&copy; 2017</span>
-</v-footer>
-</v-app>
-
-   
+    <v-footer color="black" app>
+      <span class="yellow--text">&copy; 2017</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import Choose from '../components/choose.vue';
+import Game from './game.vue';
+ export default {
+    data: () => ({
+      drawer: null
+    }),
+    props: {
+      source: String
 
-export default {
+    },
+components: {
 
-  data: () => ({
-    drawer: null,
-    dropdown_font: ['Yellow', 'Purple', 'Black', 'White'],
-    dropdown_icon: [{
-        text: 'Sphere',
-        callback: () => console.log('Sphere')
-      },
-      {
-        text: 'Tubular',
-        callback: () => console.log('Tubular')
-      },
-      {
-        text: 'Box',
-        callback: () => console.log('Box')
-      }
-    ],
-    dropdown_edit: [{
-        text: 'racing stripes'
-      },
-      {
-        text: 'jet fighter wings'
-      },
-      {
-        text: 'transformer'
-      }
-
-    ]
-
-  }),
-  props: {
-    source: String
-  },
-  components: {
-    'app-choose': Choose
+  'app-game' : Game,
   }
-}
-
+ }
+  
 </script>
 
+
+<style>
+p {
+    font-weight: 20px;
+    font-size: 30px;
+    width: 600px;
+    height: 50px;
+    background-color: lightgray;
+    padding: 6px;
+    display: inline-block;
+    margin: 10px 2px;
+    box-sizing: content-box;
+    cursor: pointer;
+    text-align: center;
+      font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+h2 {
+      font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+</style>
