@@ -63,9 +63,9 @@
  <v-toolbar-title>STARWARS</v-toolbar-title></span>
     </v-toolbar>
     <v-content>
-
-          <h3 class="display-3"> Let's Play</h3>
-
+<br>
+<br>
+<br>
  <v-jumbotron>
     <v-container fill-height>
       
