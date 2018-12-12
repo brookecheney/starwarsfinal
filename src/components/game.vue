@@ -19,7 +19,9 @@
                     :randomChar='randomChar'></gameResult>
       </v-flex>
     </v-layout>
-    <!-- conditional rendering -->
+    <!-- conditional rendering , Used mapstate to make
+     the state from your vuex available to 
+    your map -->
      <div v-if="gameResultShow" @click='restart()' class="text-xs-center">
         <v-btn round color="black" dark>Start Over</v-btn>
       </div>
@@ -54,7 +56,7 @@
         this.message = ''
       }
     },
-    computed: {
+ computed: {
       ...mapState(['characters'])
     }
   }
